@@ -1,0 +1,17 @@
+{
+    "name": "Amazon Q CLI Environment",
+    "dockerComposeFile": "${localWorkspaceFolder}/docker/compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspace/app",
+    "features": {
+        "ghcr.io/devcontainers/features/git:1": {},
+        "ghcr.io/devcontainers/features/aws-cli:1": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "golang.go"
+            ]
+        }
+    }
+}

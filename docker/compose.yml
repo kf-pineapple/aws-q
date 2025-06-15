@@ -1,0 +1,21 @@
+services:
+  app:
+    container_name: aws-q-sandbox
+    restart: unless-stopped
+    tty: true
+    # ホスト名を明示的に指定する
+    hostname: localhost
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        USERNAME: ${USERNAME:-tmp}
+        GROUPNAME: ${GROUPNAME:-tmpGroup}
+        UID: ${UID:-1000}
+        GID: ${GID:-1000}
+    volumes:
+      - ../app:/workspace/app
+    #   - $HOME/.Xauthority:/home/${USERNAME:-tmp}/.Xauthority:rw
+    # environment:
+    #   - DISPLAY=$DISPLAY
+    # network_mode: "host"
