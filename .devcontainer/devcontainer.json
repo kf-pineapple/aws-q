@@ -10,7 +10,10 @@
     "customizations": {
         "vscode": {
             "extensions": [
-                "golang.go"
+                "golang.go",
+                "GitHub.copilot",
+                "GitHub.copilot-chat",
+                "AmazonWebServices.amazon-q-vscode"
             ]
         }
     }
